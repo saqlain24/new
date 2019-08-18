@@ -1,0 +1,77 @@
+<html>
+<body>
+<h2><u>Register</u></h2>
+<form id="Register" method="GET">
+Username:<br><input type="Username" class="input" placeholder="Username" minlegth='7'><br>
+Password:<br><input type="Password" id="pass1" class="input" placeholder="Password" minlegth='6' maxlength='13' ><br>
+Re-enter Password:<br><input type="Password" id="pass2" class="input" placeholder="Re-enter password" minlength='6' maxlength='13' ><br>
+<button onclick="myFunction()" class="Registerbutton">Register</button>
+<p> Already a User? <a href="login.html"> Login </a> </p>
+<style>
+h2{
+   text-align:center;
+   font-size:50px;
+   margin-top:30px;
+}
+body{
+     background color:#663399;
+     text-align:center;
+     font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+#Register{
+         margin-top:50px;
+        margin-left:auto;
+        margin-right:auto;
+	width:270px;
+}
+.input{
+	width:270px;
+        padding:30px 40px;
+        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	background: #f5f5f5;
+	border:none;
+	border-radius: 5px;
+	color: #333;
+	font-size: 14px;
+	margin-bottom:35px;
+	margin-top: 15px;
+}
+.Registerbutton{
+                background-color:#F0FFFF;
+	        border-radius:5px/5px;
+	        color:#333;
+	        display:inline-block;
+	        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	        font-size:18px;
+	        font-weight:bold;
+             padding-bottom:20px;
+	        width:270px;
+	        text-align:center;
+	        line-height:40px;
+	        height:40px;
+	        margin-top:20px;
+	        margin-bottom:40px;
+	       
+}
+</style>
+<script>
+	window.localStorage.setItem("Username");
+	window.localStorage.setItem("Password");
+function myFunction(){
+var a = document.getElementById("pass1").value;
+var b = document.getElementById("pass2").value;
+if(a===b)
+{
+alert("correct");
+}
+else
+{
+alert("wrong");
+}
+}
+</script>
+</form>
+</body>
+</html>
+
+
